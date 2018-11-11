@@ -24,7 +24,7 @@ Time spent: **X** hours spent in total
     - Tested in version: 4.2.2
     - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough:
-  <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%202.gif" widtch="800"
+  <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%202.gif" widtch="800">
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
   
