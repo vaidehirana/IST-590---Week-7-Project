@@ -6,12 +6,15 @@ Time spent: **X** hours spent in total
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
+1. (Required) Fingerprinting 'http://wpdistillery.vm/readme.html' (wordpress file) exists exposing a version number
+  - [ ] Summary: I can see the version number which is not updated to the current 4.9. and so I can find the vulnerabilities that are in the old version of wordpress and try attacking it.
+  
     - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+    - Tested in version: 4.2
+    - Fixed in version: not fixed yet
+  - [ ] GIF Walkthrough:
+  https://i.imgur.com/Vja1ZdX.gifv
+  
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
