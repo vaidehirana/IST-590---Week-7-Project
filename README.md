@@ -1,4 +1,4 @@
-# Project 7 - WordPress Pentesting
+### Project 7 - WordPress Pentesting
 
 Time spent: **X** hours spent in total
 
@@ -8,16 +8,16 @@ Time spent: **X** hours spent in total
 
 1. (Required) Fingerprinting 'http://wpdistillery.vm/readme.html' (wordpress file) exists exposing a version number
   - [ ] Summary: I can see the version number which is not updated to the current 4.9. and so I can find the vulnerabilities that are in the old version of wordpress and try attacking it.
-  
     - Vulnerability types:
     - Tested in version: 4.2
     - Fixed in version: not fixed yet
   - [ ] GIF Walkthrough:
   <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.gif" width="800">
-  
-  - [ ] Steps to recreate: 
+
+  - [ ] Steps to recreate: When I opened the readme file I was able to see the current installed version of wordpress.
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.1.JPG" width="800">
+    
 1. (Required) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
