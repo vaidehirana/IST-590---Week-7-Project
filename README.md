@@ -27,9 +27,18 @@ Time spent: **X** hours spent in total
   <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%202.gif" widtch="800">
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
-  
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-3. (Required) Vulnerability Name or ID
+
+3. (Required) Unauthenticated Stored Cross-Site Scripting (XSS)
+  - [ ] Summary: 
+    - Vulnerability types: Cross-Site Scripting (XSS)
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.1
+  - [ ] GIF Walkthrough: 
+  <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%203.gif" widtch="800">
+  - [ ] Steps to recreate: 
+  - [ ] Affected source code:
+    
+4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
@@ -38,16 +47,7 @@ Time spent: **X** hours spent in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
+5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
