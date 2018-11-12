@@ -42,19 +42,16 @@ Time spent: **8** hours spent in total
   
   - [ ] Steps to recreate: 
       Admin login then create a post or use existing post and log out from the page and then an user add comment to the posts which is 
-      64 kb or larger. The comment would be 
-      ```
-      “<a title='x onmouseover=alert(unescape(/hello%20world/.source)) 
-      style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>” 
-      ``` 
-      and it should go upto 64 kb for this vulnerability to be seen. Once the comment is posted the XSS message pops up.
+      64 kb or larger. The comment would be ``` “<a title='x onmouseover=alert(unescape(/hello%20world/.source)) 
+      style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>” ``` and it should go upto 64 
+      kb for this vulnerability to be seen. Once the comment is posted the XSS message pops up.
   
   - [ ] Affected source code:
     - [Link 1](https://wpvulndb.com/wordpresses)
     
 3. (Required) ClickkJacking (CSRF)
   - [ ] Summary: The clickjacking works when an User or Admin posts a comment which has malicious website embedded in the HTML code and 
-  the code shows the website that is vulnerable to clickjacking
+      the code shows the website that is vulnerable to clickjacking
       
     - Vulnerability types: CSRF
     - Tested in version: 4.2
@@ -76,7 +73,7 @@ Time spent: **8** hours spent in total
        </body>
       </html>"
       ```
-      Once the code is submitted in the comment then the website would show if there was a ClickkJacking vulnerability 
+      Once the user clicks submit button the website would show clickkJacking vulnerability with a malicious website.
 
   - [ ] Affected source code:
     - [Link 1](https://wpvulndb.com/wordpresses)
