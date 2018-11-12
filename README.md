@@ -53,8 +53,8 @@ Time spent: **8** hours spent in total
     - [Link 1](https://wpvulndb.com/wordpresses)
     
 3. (Required) ClickkJacking (CSRF)
-  - [ ] Summary: The clickjacking works when an USer or Admin posts a comment in the form of HTML code and the code shows the website 
-      that is vulnerable to clickjacking
+  - [ ] Summary: The clickjacking works when an User or Admin posts a comment which has malicious website embedded in the HTML code and 
+  the code shows the website that is vulnerable to clickjacking
       
     - Vulnerability types: CSRF
     - Tested in version: 4.2
