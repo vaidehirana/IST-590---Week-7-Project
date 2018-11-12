@@ -1,33 +1,49 @@
-### Project 7 - WordPress Pentesting
+## Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
 1. (Required) Fingerprinting 'http://wpdistillery.vm/readme.html' (wordpress file) exists exposing a version number
-  - [ ] Summary: I can see the version number which is not updated to the current 4.9. and so I can find the vulnerabilities that are in the old version of wordpress and try attacking it.
+  - [ ] Summary: 
+      I can see the version number which is not updated to the current 4.9. and so I can find the vulnerabilities that are in the old 
+      version of wordpress and try attacking it
     - Vulnerability types:
     - Tested in version: 4.2
     - Fixed in version: not fixed yet
+    
   - [ ] GIF Walkthrough:
   <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.gif" width="800">
 
-  - [ ] Steps to recreate: When I opened the readme file I was able to see the current installed version of wordpress.
+  - [ ] Steps to recreate: 
+      When I opened the readme file I was able to see the current installed version of wordpress
+        
   - [ ] Affected source code:
     <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.1.JPG" width="800">
     
 2. (Required) Authenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: 
+  - [ ] Summary:
+      A stored XSS vulnerability in WordPress allows the user with the posting capability to compromise the website. Under default 
+      configuration, the attack requires a Contributor or Author level account. The attacker would insert specially formatted HTML 
+      containing JavaScript on a WordPress page or post. Some special configurations may allow posting or editing page content for 
+      unauthenticated users.
     - Vulnerability types: Cross-Site Scripting (XSS)
     - Tested in version: 4.2.2
     - Fixed in version: 4.2.3
+    
   - [ ] GIF Walkthrough:
   <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%202.gif" widtch="800">
-  - [ ] Steps to recreate: 
+  
+  - [ ] Steps to recreate:
+      Admin login then go to posts and creates a new post with the HTML code “<a href="[caption code=">]</a><a title=" 
+      onmouseover=alert('Carefull!!!')  ">link</a>”. The post is then updated and when clicked view page it will redirect to the page 
+      with the post. When you see the post there is a link and when user or admin mouse over it will give the XSS message.
+  
   - [ ] Affected source code:
-
+      https://wpvulndb.com/wordpresses
+      
 3. (Required) Unauthenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary: 
     - Vulnerability types: Cross-Site Scripting (XSS)
