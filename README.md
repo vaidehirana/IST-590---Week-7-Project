@@ -15,7 +15,7 @@ Time spent: **8** hours spent in total
     - Fixed in version: not fixed yet
     
   - [ ] GIF Walkthrough:
-  <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.gif" width="800">
+    <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.gif" width="800">
 
   - [ ] Steps to recreate: 
       When I opened the readme file I was able to see the current installed version of wordpress
@@ -34,7 +34,7 @@ Time spent: **8** hours spent in total
     - Fixed in version: 4.2.3
     
   - [ ] GIF Walkthrough:
-  <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%202.gif" widtch="800">
+    <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%202.gif" widtch="800">
   
   - [ ] Steps to recreate:
       Admin login then go to posts and creates a new post with the HTML code “<a href="[caption code=">]</a><a title=" 
@@ -42,17 +42,30 @@ Time spent: **8** hours spent in total
       with the post. When you see the post there is a link and when user or admin mouse over it will give the XSS message.
   
   - [ ] Affected source code:
-      https://wpvulndb.com/wordpresses
+     - [Link 1](https://wpvulndb.com/wordpresses)
       
 3. (Required) Unauthenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: 
+  - [ ] Summary:
+      If the comment text is long enough, it will be truncated when inserted in the database. The MySQL TEXT type size limit is 64     
+      kilobytes, so the comment must be quite long. The truncation results in malformed HTML generated on the page. The attacker can 
+      supply any attributes in the allowed HTML tags but instead of using an invalid character to truncate the comment, this time an 
+      excessively long comment is used for the same effect.
+  
     - Vulnerability types: Cross-Site Scripting (XSS)
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
+    
   - [ ] GIF Walkthrough: 
-  <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%203.gif" widtch="800">
+    <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%203.gif" widtch="800">
+  
   - [ ] Steps to recreate: 
+      Admin login then create a post or use existing post and log out from the page and then an user add comment to the posts which is 
+      64 kb or larger. The comment would be “<a title='x onmouseover=alert(unescape(/hello%20world/.source)) 
+      style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>” but add AAAA in the code to so 
+      it goes over 64 kb. Once the comment is posted the XSS message pops up.
+  
   - [ ] Affected source code:
+    - [Link 1](https://wpvulndb.com/wordpresses)
     
 4. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
@@ -63,6 +76,7 @@ Time spent: **8** hours spent in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+
 5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
