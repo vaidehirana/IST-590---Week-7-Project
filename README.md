@@ -29,8 +29,7 @@ Time spent: **8** hours spent in total
       
 2. (Required) Unauthenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary:
-      If the comment text is long enough, it will be truncated when inserted in the database. The MySQL TEXT type size limit is 64     
-      kilobytes, so the comment must be quite long. The truncation results in malformed HTML generated on the page. The attacker can 
+      If the comment text is long enough, it will be truncated when inserted in the database. The MySQL TEXT type size limit is 64             kilobytes, so the comment must be quite long. The truncation results in malformed HTML generated on the page. The attacker can 
       supply any attributes in the allowed HTML tags but instead of using an invalid character to truncate the comment, this time an 
       excessively long comment is used for the same effect.
   
@@ -43,15 +42,19 @@ Time spent: **8** hours spent in total
   
   - [ ] Steps to recreate: 
       Admin login then create a post or use existing post and log out from the page and then an user add comment to the posts which is 
-      64 kb or larger. The comment would be ``` “<a title='x onmouseover=alert(unescape(/hello%20world/.source)) 
-      style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>” ``` but add AAAA in the code to so 
-      it goes over 64 kb. Once the comment is posted the XSS message pops up.
+      64 kb or larger. The comment would be 
+      ```
+      “<a title='x onmouseover=alert(unescape(/hello%20world/.source)) 
+      style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>” 
+      ``` 
+      and it should go upto 64 kb for this vulnerability to be seen. Once the comment is posted the XSS message pops up.
   
   - [ ] Affected source code:
     - [Link 1](https://wpvulndb.com/wordpresses)
     
 3. (Required) ClickkJacking (CSRF)
-  - [ ] Summary: 
+  - [ ] Summary: The clickjacking works when an USer or Admin posts a comment in the form of HTML code and the code shows the website 
+      that is vulnerable to clickjacking
       
     - Vulnerability types: CSRF
     - Tested in version: 4.2
