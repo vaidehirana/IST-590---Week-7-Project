@@ -6,24 +6,7 @@ Time spent: **8** hours spent in total
 
 ## Pentesting Report
 
-1. (Required) Fingerprinting 'http://wpdistillery.vm/readme.html' (wordpress file) exists exposing a version number
-  - [ ] Summary: 
-      I can see the version number which is not updated to the current 4.9. and so I can find the vulnerabilities that are in the old 
-      version of wordpress and try attacking it
-    - Vulnerability types:
-    - Tested in version: 4.2
-    - Fixed in version: not fixed yet
-    
-  - [ ] GIF Walkthrough:
-    <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.gif" width="800">
-
-  - [ ] Steps to recreate: 
-      When I opened the readme file I was able to see the current installed version of wordpress
-        
-  - [ ] Affected source code:
-    <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.1.JPG" width="800">
-    
-2. (Required) Authenticated Stored Cross-Site Scripting (XSS)
+1. (Required) Authenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary:
       A stored XSS vulnerability in WordPress allows the user with the posting capability to compromise the website. Under default 
       configuration, the attack requires a Contributor or Author level account. The attacker would insert specially formatted HTML 
@@ -44,7 +27,7 @@ Time spent: **8** hours spent in total
   - [ ] Affected source code:
      - [Link 1](https://wpvulndb.com/wordpresses)
       
-3. (Required) Unauthenticated Stored Cross-Site Scripting (XSS)
+2. (Required) Unauthenticated Stored Cross-Site Scripting (XSS)
   - [ ] Summary:
       If the comment text is long enough, it will be truncated when inserted in the database. The MySQL TEXT type size limit is 64     
       kilobytes, so the comment must be quite long. The truncation results in malformed HTML generated on the page. The attacker can 
@@ -67,15 +50,49 @@ Time spent: **8** hours spent in total
   - [ ] Affected source code:
     - [Link 1](https://wpvulndb.com/wordpresses)
     
-4. (Optional) Vulnerability Name or ID
+3. (Required) ClickkJacking (CSRF)
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+      
+    - Vulnerability types: CSRF
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.2
+    
   - [ ] GIF Walkthrough: 
+      <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%204.gif" width="800">
+  
   - [ ] Steps to recreate: 
+      User or Admin login to the WordPress under the posts add a comment with the following HTML code
+     "<html>
+       <head>
+         <title>Clickjack test page</title>
+       </head>
+       <body>
+         <p>Website is vulnerable to clickjacking!</p>
+         <iframe src="http://www.target.site" width="500" height="500"></iframe>
+       </body>
+      </html>"
+      Once the code is submitted in the comment then the website would show if there was a ClickkJacking vulnerability 
+
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](https://wpvulndb.com/wordpresses)
+    
+4. (Optional) Fingerprinting 'http://wpdistillery.vm/readme.html' (wordpress file) exists exposing a version number
+  - [ ] Summary: 
+      I can see the version number which is not updated to the current 4.9. and so I can find the vulnerabilities that are in the old 
+      version of wordpress and try attacking it
+    - Vulnerability types:
+    - Tested in version: 4.2
+    - Fixed in version: not fixed yet
+    
+  - [ ] GIF Walkthrough:
+    <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.gif" width="800">
+
+  - [ ] Steps to recreate: 
+      When I opened the readme file I was able to see the current installed version of wordpress
+        
+  - [ ] Affected source code:
+    <img src="https://github.com/vaidehirana/IST-590---Week-7-Project/blob/master/Vulnerability%201.1.JPG" width="800">
+    
 
 5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
